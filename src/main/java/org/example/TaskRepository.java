@@ -15,8 +15,12 @@ public class TaskRepository implements Repository {
     }
 
     @Override
-    public String[] getTasks() throws IOException {
-        String content = Files.readString(tasksFilePath);
-        return content.split(SEPARATOR);
+    public String[] getTasks() {
+        try {
+            String content = Files.readString(tasksFilePath);
+            return content.split(SEPARATOR);
+        } catch (IOException e) {
+            return new String[0];
+        }
     }
 }
