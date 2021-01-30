@@ -1,0 +1,3 @@
+Make presentation slides.
+Prepare live coding.
+Ask for feedback.
